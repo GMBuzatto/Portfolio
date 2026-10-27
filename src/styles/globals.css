@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --background: #f7f7f8;
+  --background-subtle: #efeff1;
+
+  --surface: #ffffff;
+  --surface-hover: #f1f1f3;
+
+  --foreground: #111416;
+  --text-secondary: #3f3f46;
+  --text-tertiary: #63636b;
+  --text-brand: #166fb7;
+  --text-highlight: #3b21d9;
+
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+
+  --primary: #166fb7;
+  --primary-hover: #125c98;
+  --primary-foreground: #ffffff;
+
+  --highlight: #3b21d9;
+  --highlight-hover: #3019b8;
+  --highlight-foreground: #ffffff;
+
+  --focus-ring: #166fb7;
+
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --secondary: var(--surface-hover);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--background-subtle);
+  --muted-foreground: var(--text-tertiary);
+  --accent: var(--surface-hover);
+  --accent-foreground: var(--foreground);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --input: var(--border-strong);
+  --ring: var(--primary);
+}
+
+.dark {
+  --background: #0b0b0b;
+  --background-subtle: #101010;
+
+  --surface: #1a1a1c;
+  --surface-hover: #242427;
+
+  --foreground: #ebebeb;
+  --text-secondary: #b4b4b8;
+  --text-tertiary: #8a8a90;
+  --text-brand: #4a9be0;
+  --text-highlight: #8b7bf2;
+
+  --border: #2a2a2e;
+  --border-strong: #3a3a3f;
+
+  --primary: #166fb7;
+  --primary-hover: #1a78c4;
+  --primary-foreground: #ffffff;
+
+  --highlight: #3b21d9;
+  --highlight-hover: #5038e6;
+  --highlight-foreground: #ffffff;
+
+  --focus-ring: #4a9be0;
+
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --secondary: var(--surface-hover);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--background-subtle);
+  --muted-foreground: var(--text-tertiary);
+  --accent: var(--surface-hover);
+  --accent-foreground: var(--foreground);
+  --destructive: #f87171;
+  --destructive-foreground: #0b0b0b;
+  --input: var(--border-strong);
+  --ring: var(--text-brand);
+}
+
+@theme inline {
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-press-start), ui-monospace, monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-foreground: var(--foreground);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-brand: var(--text-brand);
+  --color-text-highlight: var(--text-highlight);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-highlight: var(--highlight);
+  --color-highlight-hover: var(--highlight-hover);
+  --color-highlight-foreground: var(--highlight-foreground);
+
+  --color-focus-ring: var(--focus-ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
