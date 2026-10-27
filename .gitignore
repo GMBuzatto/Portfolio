@@ -5,6 +5,10 @@ coverage/
 .vercel/
 .env*
 !.env.example
-*.log
-.DS_Store
 *.tsbuildinfo
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude-octopus/
