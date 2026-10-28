@@ -15,7 +15,7 @@ export function AboutSection() {
         <SectionHeading
           id="sobre-titulo"
           eyebrow="Sobre mim"
-          title="Backend sólido, visão de produto"
+          title=""
         />
         {profile.about.map((paragraph) => (
           <p key={paragraph} className="leading-relaxed text-text-secondary">

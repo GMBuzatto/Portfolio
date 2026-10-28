@@ -1,29 +1,30 @@
 import { Download } from "lucide-react";
+import Link from "next/link";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { profile } from "@/features/profile/data";
 
 const navItems = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#experiencia", label: "Experiência" },
+  { href: "/#projetos", label: "Projetos" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6">
-        <a href="#inicio" className="font-heading text-xs text-text-brand">
+        <Link href="/#inicio" className="font-heading text-xs text-text-brand">
           GmBuzatto
-        </a>
+        </Link>
 
         <nav aria-label="Seções" className="hidden md:block">
           <ul className="flex gap-8 text-sm text-text-secondary">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="transition-colors hover:text-foreground">
+                <Link href={item.href} className="transition-colors hover:text-foreground">
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -8,7 +8,7 @@ export function ExperienceSection() {
       aria-labelledby="experiencia-titulo"
       className="flex scroll-mt-20 flex-col gap-10"
     >
-      <SectionHeading id="experiencia-titulo" eyebrow="Experiência" title="Onde já entreguei" />
+      <SectionHeading id="experiencia-titulo" eyebrow="Experiência" title="" />
 
       <ol className="relative flex flex-col gap-10 border-l border-border-strong pl-8">
         {experiences.map((job) => (
