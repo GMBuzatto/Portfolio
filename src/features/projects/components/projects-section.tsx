@@ -10,7 +10,11 @@ export function ProjectsSection() {
       aria-labelledby="projetos-titulo"
       className="flex scroll-mt-20 flex-col gap-10"
     >
-      <SectionHeading id="projetos-titulo" eyebrow="Projetos" title="Meus projetos públicos no GitHub" />
+      <SectionHeading
+        id="projetos-titulo"
+        eyebrow="Projetos"
+        title="Meus projetos públicos no GitHub"
+      />
 
       <FeaturedProjectCard project={featuredProject} />
 
