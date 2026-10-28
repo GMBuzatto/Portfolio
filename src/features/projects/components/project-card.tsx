@@ -1,5 +1,7 @@
-import { ArrowUpRight, Code2, FolderGit2 } from "lucide-react";
+import { ArrowUpRight, BookOpen, Code2, FolderGit2 } from "lucide-react";
+import Link from "next/link";
 import type { Project } from "../schema";
+import { getProjectHref } from "../utils";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -18,6 +20,14 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>
 
         <div className="flex gap-4">
+          <Link
+            href={getProjectHref(project)}
+            className="inline-flex items-center gap-1 font-medium text-text-brand hover:underline"
+          >
+            README
+            <BookOpen className="size-4" aria-hidden />
+            <span className="sr-only">de {project.name}</span>
+          </Link>
           {project.homepageUrl && (
             <a
               href={project.homepageUrl}

@@ -12,11 +12,7 @@ export function AboutSection() {
       className="grid scroll-mt-20 gap-12 lg:grid-cols-2"
     >
       <div className="flex flex-col gap-6">
-        <SectionHeading
-          id="sobre-titulo"
-          eyebrow="Sobre mim"
-          title="Backend sólido, visão de produto"
-        />
+        <SectionHeading id="sobre-titulo" eyebrow="Sobre mim" title="" />
         {profile.about.map((paragraph) => (
           <p key={paragraph} className="leading-relaxed text-text-secondary">
             {paragraph}
